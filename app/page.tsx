@@ -33,6 +33,6 @@ export default function Home() {
       <section className="faq" aria-labelledby="faq-heading"><div className="faq-heading"><div className="eyebrow">A FEW QUICK ANSWERS</div><h2 id="faq-heading">Frequently asked<br/>questions.</h2><p>Getting connected, staying in control,<br/>and making sense of the sounds.</p><span className="platform"><Monitor size={16}/> macOS 14 or later</span></div><div className="faq-list">{faqs.map(([question,answer],index)=><details key={question} open={index===0}><summary>{question}<Plus size={18}/></summary><p>{answer}</p></details>)}</div></section>
       <aside className="report-note"><Bug size={20}/><p><strong>A helpful bug report makes a difference.</strong> Include your macOS version, app version, USB device or hub, and the steps that caused the issue. A screenshot of any error helps, too.</p></aside>
     </main>
-    <footer><span>USB Connection Sound <span className="footer-divider">/</span> Support <span className="footer-divider">·</span> © 2026 Brendan Wang</span><span>Made for the little connections.</span></footer>
+    <footer><span>USB Connection Sound <span className="footer-divider">/</span> Support <span className="footer-divider">·</span> © 2026 Brendan Wang</span><span><a className="footer-link" href={`${assetPrefix}/privacy.html`}>Privacy Policy</a><span className="footer-divider">·</span> Made for the little connections.</span></footer>
   </>;
 }
