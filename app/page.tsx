@@ -1,4 +1,4 @@
-import { ArrowUpRight, Cable, Mail, Bug, Volume2, Monitor, Plus, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, Mail, Bug, Volume2, Monitor, Plus, ArrowRight } from 'lucide-react';
 
 const email = 'brendanwangwork@gmail.com';
 const supportLink = `mailto:${email}?subject=${encodeURIComponent('USB Connection Sound — Support')}`;
@@ -18,7 +18,7 @@ const faqs = [
 export default function Home() {
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
-    <header className="header"><a className="brand" href="#"><span className="app-icon"><Cable size={23} strokeWidth={1.8}/></span><span>USB Connection Sound</span></a><a className="header-link" href={supportLink}>Contact support <ArrowUpRight size={16}/></a></header>
+    <header className="header"><a className="brand" href="#"><img className="app-icon" src="/app-icon.png" width={42} height={42} alt=""/><span>USB Connection Sound</span></a><a className="header-link" href={supportLink}>Contact support <ArrowUpRight size={16}/></a></header>
     <main id="main">
       <section className="intro"><div className="eyebrow"><span/> HERE TO HELP</div><h1>A little help.<br/><span>A clear connection.</span></h1><p>Support for USB Connection Sound for Mac.<br className="desktop-break"/> Find an answer below, or get in touch directly.</p></section>
       <section className="contact-grid" aria-label="Contact support">
