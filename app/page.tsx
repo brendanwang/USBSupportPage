@@ -1,8 +1,9 @@
-import { ArrowUpRight, Mail, Bug, Volume2, Monitor, Plus, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, Mail, Bug, Volume2, Monitor, Plus, ArrowRight, Download } from 'lucide-react';
 
 export const dynamic = 'force-static';
 
 const email = 'brendanwangwork@gmail.com';
+const downloadLink = 'https://github.com/brendanwang/USBConnectionSound/releases/download/v1.0.0/USBConnectionSound-1.0.0.dmg';
 const assetPrefix = process.env.GITHUB_ACTIONS === 'true' ? '/USBSupportPage' : '';
 const supportLink = `mailto:${email}?subject=${encodeURIComponent('USB Connection Sound — Support')}`;
 const bugLink = `mailto:${email}?subject=${encodeURIComponent('USB Connection Sound — Bug report')}&body=${encodeURIComponent('What happened?\n\nWhat did you expect?\n\nSteps to reproduce:\n1. \n\nmacOS version:\nApp version:\nMac model:\nUSB device / hub:\n')}`;
@@ -23,7 +24,7 @@ export default function Home() {
     <a className="skip-link" href="#main">Skip to content</a>
     <header className="header"><a className="brand" href="#"><img className="app-icon" src={`${assetPrefix}/app-icon.png`} width={42} height={42} alt=""/><span>USB Connection Sound</span></a><a className="header-link" href={supportLink}>Contact support <ArrowUpRight size={16}/></a></header>
     <main id="main">
-      <section className="intro"><div className="eyebrow"><span/> HERE TO HELP</div><h1>A little help.<br/><span>A clear connection.</span></h1><p>Support for USB Connection Sound for Mac.<br className="desktop-break"/> Find an answer below, or get in touch directly.</p></section>
+      <section className="intro"><div className="eyebrow"><span/> HERE TO HELP</div><h1>A little help.<br/><span>A clear connection.</span></h1><p>Support for USB Connection Sound for Mac.<br className="desktop-break"/> Find an answer below, or get in touch directly.</p><div className="download"><a className="download-button" href={downloadLink} download><Download size={19} aria-hidden="true"/> Download for Mac</a><span className="download-note">Version 1.0.0 · DMG · macOS 14 or later</span></div></section>
       <section className="contact-grid" aria-label="Contact support">
         <a className="contact-card primary" href={supportLink}><span className="card-icon"><Mail size={25}/></span><ArrowUpRight className="card-arrow" size={22}/><h2>Email support</h2><p>Have a question or need a hand?<br/>Let’s figure it out.</p><span className="card-action">Get in touch <ArrowRight size={17}/></span></a>
         <a className="contact-card" href={bugLink}><span className="card-icon"><Bug size={25}/></span><ArrowUpRight className="card-arrow" size={22}/><h2>Report a bug</h2><p>Something not working as expected?<br/>Tell me what happened.</p><span className="card-action">Send a bug report <ArrowRight size={17}/></span></a>
